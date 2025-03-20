@@ -8,9 +8,9 @@ const app = express();
 
 // Konfigurasi AWS
 AWS.config.update({
-  accessKeyId: 'AKIARZZX7ACRWY2UJVGD',     // Ganti dengan Access Key ID Anda
-  secretAccessKey: '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', // Ganti dengan Secret Access Key Anda
-  region: 'ap-southeast-2' // Ganti dengan Wilayah AWS Anda, misal 'us-east-1'
+  accessKeyId: 'YOUR_ACCESS_KEY_ID',     // Ganti dengan Access Key ID Anda
+  secretAccessKey: 'YOUR_SECRET_ACCESS_KEY', // Ganti dengan Secret Access Key Anda
+  region: 'YOUR_REGION' // Ganti dengan Wilayah AWS Anda, misal 'us-east-1'
 });
 
 const s3 = new AWS.S3();
@@ -53,6 +53,6 @@ app.get('/files', async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log('Server berjalan di http://localhost:3000');
+app.listen(8080, () => {
+  console.log('Server berjalan di http://localhost:8080');
 });
