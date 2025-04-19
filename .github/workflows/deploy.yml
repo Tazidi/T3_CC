@@ -23,8 +23,12 @@ jobs:
           ssh -o StrictHostKeyChecking=no ec2-user@54.252.204.242 << 'EOF'
           cd /var/www/html/T3_CC
           git pull origin main
+          npm install
+          pm2 restart kisis || pm2 start index.js --name kisis
+          pm2 save
           # Restart Nginx or any other service if needed
           sudo systemctl restart httpd
           EOF
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
