@@ -53,6 +53,18 @@ app.get('/files', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 app.listen(3000, () => {
   console.log('Server berjalan di http://localhost:3000');
 });
+=======
+<<<<<<< HEAD
+app.listen(8080, () => {
+  console.log('Server berjalan di http://localhost:8080');
+});
+=======
+app.listen(3000, () => {
+  console.log('Server berjalan di http://localhost:3000');
+});
+>>>>>>> bbf4445 (dari aws)
+>>>>>>> 2bc72c6 (dari aws)
