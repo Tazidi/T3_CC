@@ -48,8 +48,8 @@ app.get('/files', async (req, res) => {
 
     res.json(files);
   } catch (error) {
-    console.error("Error saat mengambil daftar file:", error);
-    res.status(500).json({ error: "Gagal mengambil daftar file" });
+    console.error("Error saat mengambil daftar file:", error); // Log the actual error
+    res.status(500).json({ error: "Gagal mengambil daftar file", details: error.message });
   }
 });
 
