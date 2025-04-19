@@ -23,6 +23,9 @@ jobs:
           ssh -o StrictHostKeyChecking=no ec2-user@54.252.204.242 << 'EOF'
           cd /var/www/html/T3_CC
           git pull origin main
+          pm2 stop all
+          pm2 delete all
+
           # Restart Nginx or any other service if needed
           sudo systemctl restart httpd
           EOF
